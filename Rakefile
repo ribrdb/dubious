@@ -87,7 +87,7 @@ namespace :compile do
   end
 end
 
-CLASSPATH = [AppEngine::Rake::SERVLET, AppEngine::SDK::API_JAR].join(":")
+CLASSPATH = [AppEngine::Rake::SERVLET, AppEngine::SDK::API_JAR, File.expand_path("javalib/dubydatastore.jar"), File.expand_path("lib/dubious.jar"), OUTDIR].join(":")
 
 directory OUTDIR
 

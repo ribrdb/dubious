@@ -15,7 +15,7 @@
   <% for entry in @entries 
        name = entry.getName
        reserved = name.equals('_ah') # now seems to be hidden
-       kind = (reserved or entry.isDirectory) ? 'dir' : 'file'
+       kind = entry.isDirectory ? 'dir' : 'file'
        link = reserved ? '#' : @base + name
        onclick = "location.href='#{link}'" %>
     <img alt="" src="/images/<%= kind %>.gif" width='16' height='16'

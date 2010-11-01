@@ -6,6 +6,7 @@ class ContactsController < ApplicationController
   # GET /contacts
   def index
     @contacts = Contact.all.run
+    puts "hi2"
     render index_erb, main_erb
   end
 
@@ -29,7 +30,7 @@ class ContactsController < ApplicationController
 
   # DELETE /contacts/1
   def delete
-    Contact.delete(Contact.get(params.id).key)
+    #Contact.delete(Contact.get(params.id).key)
     redirect_to params.index
   end
 
